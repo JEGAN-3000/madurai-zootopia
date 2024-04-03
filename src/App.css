@@ -1,38 +1,253 @@
-.App {
-  text-align: center;
+#linkTags a.active{
+    @apply border-b-2  duration-100    
+}
+@import url('https://fonts.googleapis.com/css2?family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Delius&family=Sriracha&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Delius&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+.lobster{
+    font-family: "Lobster Two", sans-serif;
+}
+.welcome h1{
+    font-size: 40px;
+}
+    
+.sriracha{
+    font-family: "Sriracha", cursive;
+
+}
+*{
+     font-family: "Poppins", sans-serif;
+}
+.delius{
+    font-family: "Delius", cursive;
+}
+.homepage{
+    background: url(./Assets/Backgrounds/Home-bg.jpg);
+
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+   
+    background-repeat: no-repeat;
+    z-index: -1;
+    
+}
+.homepage h1{  
+    font-size: 40px;
+    text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.timerContainer>h4{
+    font-size: 25px;
+    padding: 5px;
+    text-align: center;
+    letter-spacing: 3px;
+}
+.zooHomeImageContainer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;    
+    padding: 100px;
+    margin-top: 20px;
+    position: relative;
+    left: -10px;
+
+ }
+ .zooGalleryItem:nth-child(1){
+     /* transform: translateX(60px); */
+     z-index: 3;
+ }
+ .zooGalleryItem:nth-child(2){    
+     z-index: 2;
+ }
+ .zooGalleryItem:nth-child(3){
+     transform: scale(-40px);
+ }
+ .zooGalleryItem{
+     width: 500px;
+     height: 350px;
+     object-fit: cover;
+     border-radius: 10px 60px;
+     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+     overflow: hidden;
+     transition: all 0.6s ease-in-out;
+     cursor: pointer;
+     padding: 10px;
+     margin-bottom: 10px;
+
+ }
+ .zooGalleryItem:hover{
+     transform: scale(1.1);
+     transform: translate(0px,-60px);
+     z-index: 4;
+     filter: grayscale(0%);
+ }
+ .zooGalleryItem:not(hover){
+     filter: grayscale(100%);
+ }
+ 
+ @media screen and (max-width: 1025px){
+    
+}
+@media(max-width:768px)
+{
+    .homepage h1{        
+        font-size: 20px;
+        text-align: center;
+    }
+    .zooHomeImageContainer{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;    
+        flex-direction: column;
+    
+     }
+     .zooGalleryItem:nth-child(1){
+         transform: scale(0px);
+         z-index: 3;
+     }
+     .zooGalleryItem:nth-child(2){    
+         z-index: 2;
+     }
+     .zooGalleryItem:nth-child(3){
+         transform: scale(40px);
+     }
+     .zooGalleryItem{
+         width: 600px;
+         height: 250px;         
+         box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+         
+         transition: all 0.6s ease-in-out;
+         cursor: pointer;
+    
+     }
+     .zooGalleryItem img{
+         width: 600px;
+         height: 450px;
+         object-fit: cover;       
+         box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+         
+         transition: all 0.6s ease-in-out;
+         cursor: pointer;
+    
+     }
+     .zooGalleryItem:hover{
+         transform: scale(1.1);
+         transform: scale(0px,60px);
+         z-index: 4;
+         filter: grayscale(0%);
+     }
+     .zooGalleryItem:not(hover){
+         filter: grayscale(100%);
+     }
+}
+@media(max-width:600px){
+   
+}
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Space+Grotesk:wght@500&display=swap');
+.aboutPage{
+    background: url(./Assets/Backgrounds/About-bg.jpg);
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+    box-shadow: inset 0 0 0 800px rgba(0, 0, 0, 0.5);
+}
+.history{
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+}
+.aboutContent{
+    color: white;
+    display: block;
+    justify-content: center;
+    align-items: center;    
+    
+}
+.aboutContent>h1{
+    letter-spacing: 3px;
+    
+}
+.aboutContent>h1,h5{
+    position: relative;
+    top: 100px;
+    text-align: center;
+}
+.aboutContent>h5{
+    text-align: justify;
+    width: 700px;
+    top: 150px;
+    left: 300px;
+    line-height: 40px;
+    font-size: 15px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    box-shadow: 1px 0 10px black;
+}
+@media(max-width:768px)
+{
+    .aboutContent>h1{
+        letter-spacing: 3px;
+        padding: 3px;
+      
+    }
+}
+.contactPage{
+    background: url(./Assets/Backgrounds/Contact-bg.jpg);
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    box-shadow: inset 0 0 0 800px rgba(0, 0, 0, 0.5);
+    width: 100vw;
+    display: flex;
+    justify-content:space-around; 
+    flex-direction: column;
+    gap: 10px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+@media(max-width:768px)
+{
+    nav{
+        position: fixed;
+        top: 0;
+    }
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.navbar{
+    position: static;
+    top: 0;
 }
+.animals{
+    background: url('./Assets/Backgrounds/Animal-bg.png');    
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;    
 
-.App-link {
-  color: #61dafb;
+
+ 
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* body{
+    background: url('./Assets/Backgrounds/Animal-bg.png');    
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat; 
+    height: 100%;
+} */
+@media(max-width:768px)
+{
+    /* body{
+        background: url('./Assets/Backgrounds/Animal-bg.png');    
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat; 
+        height: 100%;
+    } */
+}
+.propsDiv{
+    background: url('./Assets/Backgrounds/Animal-bg.png');    
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat; 
+    height: 100%;
 }
